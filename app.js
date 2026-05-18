@@ -465,5 +465,42 @@ function bootstrap() {
   if (autoSaveTimer) clearInterval(autoSaveTimer);
   autoSaveTimer = setInterval(saveGame, 30000);
 }
+const SpeechRecognition =
+  window.SpeechRecognition ||
+  window.webkitSpeechRecognition;
 
+const recognition = new SpeechRecognition();
+
+recognition.lang = "fa-IR";
+
+recognition.continuous = true;
+
+recognition.interimResults = true;
+
+recognition.onresult = (event) => {
+
+  let text = "";
+
+  for (
+    let i = event.resultIndex;
+    i < event.results.length;
+    i++
+  ) {
+
+    text += event.results[i][0].transcript;
+  }
+
+  console.log(text);
+
+  document.getElementById("speechText").innerText =
+    text;
+};
+
+recognition.onerror = (e) => {
+  console.log(e);
+};
+
+function startVoice() {
+  recognition.start();
+}
 document.addEventListener("DOMContentLoaded", bootstrap);
