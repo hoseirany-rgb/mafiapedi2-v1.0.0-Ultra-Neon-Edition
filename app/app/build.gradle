@@ -1,2 +1,32 @@
 implementation 'org.vosk:vosk-android:0.3.38'
 implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+app/
+├── analyzer/
+│   ├── HeuristicAnalyzer.kt
+│   ├── SuspicionEngine.kt
+│   └── DialogueAdvisor.kt
+│
+├── audio/
+│   ├── AudioRecorder.kt
+│   └── VoskManager.kt
+│
+├── graph/
+│   ├── TargetGraph.kt
+│   └── MafiaGraphView.kt
+│
+├── keyboard/
+│   ├── MafiaKeyboardService.kt
+│   ├── VoiceInputManager.kt
+│   └── keyboard.xml
+│
+├── models/
+│   ├── Player.kt
+│   ├── SpeechLog.kt
+│   └── GameState.kt
+│
+├── storage/
+│   └── SaveManager.kt
+│
+└── ui/
+    └── MainActivity.kt
+InputMethodService + Vosk
