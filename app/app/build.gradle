@@ -1,0 +1,2 @@
+implementation 'org.vosk:vosk-android:0.3.38'
+implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
