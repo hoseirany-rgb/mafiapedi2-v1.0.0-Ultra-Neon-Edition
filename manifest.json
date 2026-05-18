@@ -1,0 +1,9 @@
+{
+  "name": "MafiaPedi2",
+  "short_name": "MafiaPedi2",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0e0f14",
+  "theme_color": "#0e0f14",
+  "orientation": "portrait"
+}

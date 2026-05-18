@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0e0f14">
+<title>MafiaPedi2</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="app-header">
+  <div>
+    <h1>MafiaPedi2</h1>
+    <p>آفلاین • تارگت • دیالوگ • تحلیل</p>
+  </div>
+  <div class="header-actions">
+    <button id="btnNew">بازی جدید</button>
+    <button id="btnSave">ذخیره</button>
+    <button id="btnLoad">ادامه</button>
+  </div>
+</header>
+
+<main class="layout">
+  <section class="panel controls">
+    <div class="row">
+      <label>تعداد بازیکن
+        <select id="playerCount">
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12" selected>12</option>
+        </select>
+      </label>
+      <label>سناریو
+        <select id="scenarioSelect">
+          <option value="classic">کلاسیک</option>
+          <option value="godfather">گادفادر</option>
+          <option value="twoDoctors">دو پزشک</option>
+          <option value="inspector">بازپرس</option>
+        </select>
+      </label>
+      <label>گوینده
+        <select id="speakerSelect"></select>
+      </label>
+    </div>
+
+    <div class="row wrap">
+      <button id="btnSpeak">شروع شنیدن</button>
+      <button id="btnAddNote">ثبت متن</button>
+      <button id="btnResetEdges">پاک‌کردن تارگت‌ها</button>
+    </div>
+
+    <div class="scoreline">
+      <span>بازیکن انتخاب‌شده: <b id="selectedPlayer">—</b></span>
+      <span>حالت: <b id="modeLabel">Tap → Tap</b></span>
+      <span>آخرین ذخیره: <b id="lastSaved">—</b></span>
+    </div>
+  </section>
+
+  <section class="panel graph-panel">
+    <div class="graph-toolbar">
+      <div>روی یک بازیکن بزن، بعد روی بازیکن بعدی بزن تا تارگت ساخته شود.</div>
+      <div>Drag برای جابه‌جایی • چرخ ماوس برای زوم</div>
+    </div>
+    <div id="graphWrap">
+      <svg id="graphSvg" viewBox="0 0 1200 760" preserveAspectRatio="none">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z"></path>
+          </marker>
+        </defs>
+        <g id="graphTransform">
+          <g id="edgeLayer"></g>
+          <g id="nodeLayer"></g>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="panel side-panel">
+    <h2>وضعیت بازیکنان</h2>
+    <div id="playersList" class="cards"></div>
+
+    <h2>ثبت گفتار</h2>
+    <textarea id="speechText" placeholder="متن صحبت اینجا نمایش داده می‌شود..."></textarea>
+    <textarea id="noteText" placeholder="یادداشت سریع، تگ، یا نکته..."></textarea>
+
+    <h2>دیالوگ‌های داخلی</h2>
+    <div id="dialogueBox" class="dialogues"></div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

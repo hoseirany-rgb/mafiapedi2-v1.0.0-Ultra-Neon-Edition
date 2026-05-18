@@ -1,0 +1,70 @@
+{
+  "classic": {
+    "name": "کلاسیک",
+    "roles": [
+      "Mafia",
+      "Doctor",
+      "Detective",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen"
+    ]
+  },
+  "godfather": {
+    "name": "گادفادر",
+    "roles": [
+      "Godfather",
+      "Mafia",
+      "Doctor",
+      "Detective",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen"
+    ]
+  },
+  "twoDoctors": {
+    "name": "دو پزشک",
+    "roles": [
+      "Mafia",
+      "Doctor",
+      "Doctor",
+      "Citizen",
+      "Citizen",
+      "Detective",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen"
+    ]
+  },
+  "inspector": {
+    "name": "بازپرس",
+    "roles": [
+      "Mafia",
+      "Inspector",
+      "Doctor",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen",
+      "Citizen"
+    ]
+  }
+}
